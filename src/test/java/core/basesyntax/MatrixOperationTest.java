@@ -25,7 +25,7 @@ public class MatrixOperationTest {
         MatrixOperation matrixOperation = new MatrixOperation();
         int[] actualResult = matrixOperation.getDiagonal(TEST_MATRIX);
         Assert.assertArrayEquals("Test failed with result = "
-                + Arrays.toString(actualResult), actualResult, MATRIX_EXPECTED_DIAGONAL);
+                + Arrays.toString(actualResult), MATRIX_EXPECTED_DIAGONAL, actualResult);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class MatrixOperationTest {
         MatrixOperation matrixOperation = new MatrixOperation();
         int[] actualResult = matrixOperation.getDiagonal(SINGLE_ELEMENT_MATRIX);
         Assert.assertArrayEquals("Test failed with result = "
-                + Arrays.toString(actualResult), actualResult, SINGLE_ELEMENT_EXPECTED_DIAGONAL);
+                + Arrays.toString(actualResult), SINGLE_ELEMENT_EXPECTED_DIAGONAL, actualResult);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class MatrixOperationTest {
         int expectedResult = Arrays.stream(TEST_MATRIX)
                 .flatMapToInt(Arrays::stream).min().getAsInt();
         Assert.assertEquals("Test failed with min result = "
-                + actualResult, actualResult, expectedResult);
+                + actualResult, expectedResult, actualResult);
     }
 
     @Test
@@ -53,7 +53,7 @@ public class MatrixOperationTest {
         int expectedResult = Arrays.stream(SINGLE_ELEMENT_MATRIX)
                 .flatMapToInt(Arrays::stream).min().getAsInt();
         Assert.assertEquals("Test failed with min result = "
-                + actualResult, actualResult, expectedResult);
+                + actualResult, expectedResult, actualResult);
     }
 
     @Test
@@ -63,7 +63,7 @@ public class MatrixOperationTest {
         int expectedResult = Arrays.stream(TEST_MATRIX)
                 .flatMapToInt(Arrays::stream).max().getAsInt();
         Assert.assertEquals("Test failed with max result = "
-                + actualResult, actualResult, expectedResult);
+                + actualResult, expectedResult, actualResult);
     }
 
     @Test
@@ -73,6 +73,6 @@ public class MatrixOperationTest {
         int expectedResult = Arrays.stream(SINGLE_ELEMENT_MATRIX)
                 .flatMapToInt(Arrays::stream).max().getAsInt();
         Assert.assertEquals("Test failed with max result = "
-                + actualResult, actualResult, expectedResult);
+                + actualResult, expectedResult, actualResult);
     }
 }
