@@ -34,7 +34,7 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-        int tempMax = 0;
+        int tempMax = -5;
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
