@@ -27,15 +27,15 @@ public class MatrixOperation {
 
 
     public int getMin(int[][] matrix) {
-        int min = matrix[0][0];
+        int minvalue = matrix[0][0];
         for (int i = 0; i < matrix.length - 1; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                if (matrix[i][j] < min) {
-                    min = matrix[i][j];
+                if (matrix[i][j] < minvalue) {
+                    minvalue = matrix[i][j];
                 }
             }
         }
-        return min;
+        return minvalue;
     }
 
     public int getMax(int[][] matrix) {
