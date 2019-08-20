@@ -3,13 +3,10 @@ package core.basesyntax;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Реалізуйте методи для знаходження головної діагоналі прямокутної матриці,
- * максимального та мінімального елементів.
- */
 public class MatrixOperation {
+
     protected int[] getDiagonal(int[][] matrix) {
-        int diagonal[] = new int[matrix.length];
+        int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             diagonal[i] = matrix[i][i];
         }
