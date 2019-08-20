@@ -5,6 +5,10 @@ package core.basesyntax;
  * максимального та мінімального елементів.
  */
 public class MatrixOperation {
+
+    /**
+     * Метод повертає головну діагональ матриці.
+     */
     public int[] getDiagonal(int[][] matrix) {
         int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
@@ -13,6 +17,9 @@ public class MatrixOperation {
         return diagonal;
     }
 
+    /**
+     * Метод повертає найменший елемент матриці.
+     */
     public int getMin(int[][] matrix) {
         int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
@@ -25,6 +32,9 @@ public class MatrixOperation {
         return min;
     }
 
+    /**
+     * Метод повертає найбільший елемент матриці.
+     */
     public int getMax(int[][] matrix) {
         int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
