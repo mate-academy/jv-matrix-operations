@@ -5,6 +5,11 @@ package core.basesyntax;
  * максимального та мінімального елементів.
  */
 public class MatrixOperation {
+
+    /**
+     * Returns diagonal.
+     *
+     */
     public int[] getDiagonal(int[][] matrix) {
         int[] result = new int[matrix.length];
         for (int i = 0;i < matrix.length;i++) {
@@ -13,6 +18,10 @@ public class MatrixOperation {
         return result;
     }
 
+    /**
+     * Returns the smaller number of values {@code int} in matrix.
+     *
+     */
     public int getMin(int[][] matrix) {
         int result = matrix[0][0];
         for (int i = 0; i <= matrix.length - 1; i++) {
@@ -23,6 +32,10 @@ public class MatrixOperation {
         return result;
     }
 
+    /**
+     * Returns the greatest number of values {@code int} in matrix.
+     *
+     */
     public int getMax(int[][] matrix) {
         int result = matrix[0][0];
         for (int i = 0; i <= matrix.length - 1; i++) {
