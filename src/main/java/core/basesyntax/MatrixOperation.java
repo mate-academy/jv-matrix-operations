@@ -7,7 +7,7 @@ package core.basesyntax;
 public class MatrixOperation {
 
     /**
-     * Method return main diagonal of matrix.
+     * Returns main diagonal of matrix.
      *
      * @return main diagonal of matrix
      */
@@ -20,9 +20,9 @@ public class MatrixOperation {
     }
 
     /**
-     * Method return min value of matrix.
+     * Returns min value of matrix.
      *
-     * @return min value of matrix.
+     * @return min value of matrix, or 0 if matrix empty
      */
     public int getMin(int[][] matrix) {
         int min;
@@ -42,9 +42,9 @@ public class MatrixOperation {
     }
 
     /**
-     * Method return max value of matrix.
+     * Returns max value of matrix.
      *
-     * @return max value of matrix.
+     * @return max value of matrix or 0, if matrix empty
      */
     public int getMax(int[][] matrix) {
         int max;
