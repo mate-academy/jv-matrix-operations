@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MatrixOperation {
 
     protected int[] getDiagonal(int[][] matrix) {
@@ -14,13 +11,15 @@ public class MatrixOperation {
     }
 
     protected int getMin(int[][] matrix) {
-        List<Integer> oneDMatrix = new ArrayList<>();
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                oneDMatrix.add(matrix[i][j]);
+        int[] oneDMatrix = new int[matrix[0].length * matrix.length];
+        int t = 0;
+        for (int[] i : matrix) {
+            for (int j : i) {
+                oneDMatrix[t] = j;
+                t++;
             }
         }
-        int min = oneDMatrix.get(0);
+        int min = oneDMatrix[0];
         for (int i : oneDMatrix) {
             if (min > i) {
                 min = i;
@@ -30,13 +29,15 @@ public class MatrixOperation {
     }
 
     protected int getMax(int[][] matrix) {
-        List<Integer> oneDMatrix = new ArrayList<>();
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                oneDMatrix.add(matrix[i][j]);
+        int[] oneDMatrix = new int[matrix[0].length * matrix.length];
+        int t = 0;
+        for (int[] i : matrix) {
+            for (int j : i) {
+                oneDMatrix[t] = j;
+                t++;
             }
         }
-        int max = oneDMatrix.get(0);
+        int max = oneDMatrix[0];
         for (int i : oneDMatrix) {
             if (max < i) {
                 max = i;
