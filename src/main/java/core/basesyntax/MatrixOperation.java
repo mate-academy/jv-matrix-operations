@@ -11,11 +11,7 @@ public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
         int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (i == j) {
-                    diagonal[i] = matrix[i][j];
-                }
-            }
+            diagonal[i] = matrix[i][i];
         }
         return diagonal;
     }
