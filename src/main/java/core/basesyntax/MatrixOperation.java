@@ -13,9 +13,9 @@ public class MatrixOperation {
     protected int getMin(int[][] matrix) {
         int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length - 1; j++) {
-                if (min > matrix[i][j + 1]) {
-                    min = matrix[i][j + 1];
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (min > matrix[i][j]) {
+                    min = matrix[i][j];
                 }
             }
         }
@@ -25,9 +25,9 @@ public class MatrixOperation {
     protected int getMax(int[][] matrix) {
         int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length - 1; j++) {
-                if (max < matrix[i][j + 1]) {
-                    max = matrix[i][j + 1];
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (max < matrix[i][j]) {
+                    max = matrix[i][j];
                 }
             }
         }
