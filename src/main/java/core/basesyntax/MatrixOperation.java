@@ -1,9 +1,5 @@
 package core.basesyntax;
 
-/**
- * Реалізуйте методи для знаходження головної діагоналі прямокутної матриці,
- * максимального та мінімального елементів.
- */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
 
