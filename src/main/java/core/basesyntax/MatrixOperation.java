@@ -23,29 +23,31 @@ public class MatrixOperation {
 
     public int getMin(int[][] matrix) {
 
-        int [] flat = new int [matrix.length * matrix[0].length];
-        int count = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                flat[count++] = matrix[i][j];
+        int min = matrix[0][0];
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[j][i] < min) {
+                    min = matrix[j][i];
+                }
             }
         }
-        Arrays.sort(flat);
 
-        return flat[0];
+
+        return min;
     }
 
     public int getMax(int[][] matrix) {
 
-        int [] flat = new int [matrix.length * matrix[0].length];
-        int count = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                flat[count++] = matrix[i][j];
+        int max = matrix[0][0];
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[j][i] > max) {
+                    max = matrix[j][i];
+                }
             }
         }
-        Arrays.sort(flat);
 
-        return flat[flat.length - 1];
+
+        return max;
     }
 }
