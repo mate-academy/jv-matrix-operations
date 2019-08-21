@@ -7,11 +7,11 @@ package core.basesyntax;
 public class MatrixOperation {
     protected int[] getDiagonal(int[][] matrix) {
         int size = matrix[0].length > matrix.length ? matrix.length : matrix[0].length;
-        int[] retArray = new int[size];
+        int[] returnArray = new int[size];
         for (int i = 0; i < size; i++) {
-            retArray[i] = matrix[i][i];
+            returnArray[i] = matrix[i][i];
         }
-        return retArray;
+        return returnArray;
     }
 
     protected int getMin(int[][] matrix) {
