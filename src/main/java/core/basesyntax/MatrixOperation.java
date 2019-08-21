@@ -25,12 +25,12 @@ public class MatrixOperation {
      * @return min value of matrix, or 0 if matrix empty
      */
     public int getMin(int[][] matrix) {
-        int min;
-        if (matrix != null) {
-            min = matrix[0][0];
-        } else {
+        if (matrix == null) {
             return 0;
         }
+
+        int min = matrix[0][0];
+
         for (int[] numbers : matrix) {
             for (int number : numbers) {
                 if (number < min) {
@@ -47,12 +47,12 @@ public class MatrixOperation {
      * @return max value of matrix or 0, if matrix empty
      */
     public int getMax(int[][] matrix) {
-        int max;
-        if (matrix != null) {
-            max = matrix[0][0];
-        } else {
+        if (matrix == null) {
             return 0;
         }
+
+        int max = matrix[0][0];
+        
         for (int[] numbers : matrix) {
             for (int number : numbers) {
                 if (number > max) {
