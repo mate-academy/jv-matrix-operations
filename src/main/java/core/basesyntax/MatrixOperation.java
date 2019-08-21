@@ -6,17 +6,17 @@ package core.basesyntax;
 
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int[] res = new int[matrix.length];
+        int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            res[i] = matrix[i][i];
+            diagonal[i] = matrix[i][i];
         }
-        return res;
+        return diagonal;
     }
 
     public int getMin(int[][] matrix) {
         int min = matrix[0][0];
-        for (int[] slice : matrix) {
-            for (int element : slice) {
+        for (int[] vector : matrix) {
+            for (int element : vector) {
                 if (element < min) {
                     min = element;
                 }
@@ -27,8 +27,8 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int max = matrix[0][0];
-        for (int[] slice : matrix) {
-            for (int element : slice) {
+        for (int[] vector : matrix) {
+            for (int element : vector) {
                 if (element > max) {
                     max = element;
                 }
