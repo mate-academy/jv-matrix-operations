@@ -6,9 +6,8 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     protected int[] getDiagonal(int[][] matrix) {
-        int size = matrix.length;
-        int[] returnArray = new int[size];
-        for (int i = 0; i < size; i++) {
+        int[] returnArray = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
             returnArray[i] = matrix[i][i];
         }
         return returnArray;
