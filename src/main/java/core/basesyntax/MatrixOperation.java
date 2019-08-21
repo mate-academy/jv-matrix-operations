@@ -8,6 +8,7 @@ public class MatrixOperation {
 
     /**
      * Method return main diagonal of matrix.
+     *
      * @return main diagonal of matrix
      */
     public int[] getDiagonal(int[][] matrix) {
@@ -20,10 +21,16 @@ public class MatrixOperation {
 
     /**
      * Method return min value of matrix.
+     *
      * @return min value of matrix.
      */
     public int getMin(int[][] matrix) {
-        int min = Integer.MAX_VALUE;
+        int min;
+        if (matrix != null) {
+            min = matrix[0][0];
+        } else {
+            return 0;
+        }
         for (int[] numbers : matrix) {
             for (int number : numbers) {
                 if (number < min) {
@@ -36,10 +43,16 @@ public class MatrixOperation {
 
     /**
      * Method return max value of matrix.
+     *
      * @return max value of matrix.
      */
     public int getMax(int[][] matrix) {
-        int max = Integer.MIN_VALUE;
+        int max;
+        if (matrix != null) {
+            max = matrix[0][0];
+        } else {
+            return 0;
+        }
         for (int[] numbers : matrix) {
             for (int number : numbers) {
                 if (number > max) {
