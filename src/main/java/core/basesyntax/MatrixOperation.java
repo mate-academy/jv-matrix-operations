@@ -25,7 +25,7 @@ public class MatrixOperation {
     }
 
     protected int getMin(int[][] matrix) {
-        int minimum = Integer.MAX_VALUE;
+        int minimum = matrix[0][0];
         for (int[] numbers : matrix) {
             for (int number : numbers) {
                 if (number < minimum) {
@@ -37,7 +37,7 @@ public class MatrixOperation {
     }
 
     protected int getMax(int[][] matrix) {
-        int maximum = Integer.MIN_VALUE;
+        int maximum = matrix[0][0];
         for (int[] numbers : matrix) {
             for (int number : numbers) {
                 if (number > maximum) {
