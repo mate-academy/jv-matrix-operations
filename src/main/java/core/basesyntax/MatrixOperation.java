@@ -6,11 +6,11 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int[] diag = new int[matrix.length];
+        int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            diag[i] = matrix[i][i];
+            diagonal[i] = matrix[i][i];
         }
-        return diag;
+        return diagonal;
     }
 
     public int getMin(int[][] matrix) {
