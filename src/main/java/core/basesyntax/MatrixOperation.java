@@ -6,7 +6,6 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-
         int[] diag = new int[matrix.length];
         for (int i = 0; i < diag.length; i++) {
             diag[i] = matrix[i][i];
@@ -15,7 +14,6 @@ public class MatrixOperation {
     }
 
     public int getMin(int[][] matrix) {
-
         if (matrix.length == 0) {
             return 0;
         }
@@ -31,7 +29,6 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-
         if (matrix.length == 0) {
             return 0;
         }
