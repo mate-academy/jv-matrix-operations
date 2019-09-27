@@ -20,6 +20,9 @@ public class MatrixOperationTest {
     private static final int[] MATRIX_EXPECTED_DIAGONAL = {-2, -42, 12, -10};
     private static final int[] SINGLE_ELEMENT_EXPECTED_DIAGONAL = {-5};
 
+    private static final int[] COUNTER_MATRIX_EXPECTED_DIAGONAL = {7, 1, -7, 55};
+    private static final int[] COUNTER_SINGLE_ELEMENT_EXPECTED_DIAGONAL = {-5};
+
     @Test
     public void getMatrixDiagonal() {
         MatrixOperation matrixOperation = new MatrixOperation();
@@ -34,6 +37,23 @@ public class MatrixOperationTest {
         int[] actualResult = matrixOperation.getDiagonal(SINGLE_ELEMENT_MATRIX);
         Assert.assertArrayEquals("Test failed with result = "
                 + Arrays.toString(actualResult), SINGLE_ELEMENT_EXPECTED_DIAGONAL, actualResult);
+    }
+
+    @Test
+    public void getCounterMatrixDiagonal() {
+        MatrixOperation matrixOperation = new MatrixOperation();
+        int[] actualResult = matrixOperation.getCounterDiagonal(TEST_MATRIX);
+        Assert.assertArrayEquals("Test failed with result = "
+                + Arrays.toString(actualResult), COUNTER_MATRIX_EXPECTED_DIAGONAL, actualResult);
+    }
+
+    @Test
+    public void getCounterSingleElementMatrixDiagonal() {
+        MatrixOperation matrixOperation = new MatrixOperation();
+        int[] actualResult = matrixOperation.getCounterDiagonal(SINGLE_ELEMENT_MATRIX);
+        Assert.assertArrayEquals("Test failed with result = "
+                        + Arrays.toString(actualResult),
+                COUNTER_SINGLE_ELEMENT_EXPECTED_DIAGONAL, actualResult);
     }
 
     @Test
