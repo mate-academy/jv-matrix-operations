@@ -1,11 +1,15 @@
 package core.basesyntax;
 
 /**
- * Реалізуйте методи для знаходження головної діагоналі прямокутної матриці,
+ * Реалізуйте методи для знаходження головної та побічної діагоналі прямокутної матриці,
  * максимального та мінімального елементів.
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
+        return null;
+    }
+
+    public int[] getCounterDiagonal(int[][] matrix) {
         return null;
     }
 
