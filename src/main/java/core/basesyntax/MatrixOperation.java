@@ -14,16 +14,15 @@ public class MatrixOperation {
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int arrayLength = matrix.length - 1;
         int[] mainDiagonal = new int[matrix.length];
-        for (int i = 0; i <= arrayLength; i++) {
-            mainDiagonal[i] = matrix[i][arrayLength - i];
+        for (int i = 0; i <= matrix.length - 1; i++) {
+            mainDiagonal[i] = matrix[i][matrix.length - 1 - i];
         }
         return mainDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        int minimum = Integer.MAX_VALUE;
+        int minimum = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 minimum = matrix[i][j] < minimum ? matrix[i][j] : minimum;
@@ -33,7 +32,7 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-        int maximum = Integer.MIN_VALUE;
+        int maximum = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 maximum = matrix[i][j] > maximum ? matrix[i][j] : maximum;
