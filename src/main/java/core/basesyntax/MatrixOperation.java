@@ -14,11 +14,11 @@ public class MatrixOperation {
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int[] countDiagоnal = new int[matrix[0].length];
+        int[] countDiagonal = new int[matrix[0].length];
         for (int i = 0; i < matrix[0].length; i++) {
-            countDiagоnal[i] = matrix[i][matrix.length - i - 1];
+            countDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
-        return countDiagоnal;
+        return countDiagonal;
     }
 
     public int getMin(int[][] matrix) {
