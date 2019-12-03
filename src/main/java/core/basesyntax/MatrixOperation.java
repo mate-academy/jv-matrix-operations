@@ -8,7 +8,7 @@ public class MatrixOperation {
 
     public int[] getDiagonal(int[][] matrix) {
         int[] diagonal = new int[matrix[0].length];
-        for (int i = matrix.length - 1;i >= 0;i--) {
+        for (int i = matrix.length - 1; i >= 0; i--) {
             diagonal[i] = matrix[i][i];
         }
         return diagonal;
@@ -26,9 +26,8 @@ public class MatrixOperation {
         int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                int n = matrix[i][j];
-                if (n < min) {
-                    min = n;
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
                 }
             }
         }
@@ -39,13 +38,11 @@ public class MatrixOperation {
         int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                int n = matrix[i][j];
-                if (n > max) {
-                    max = n;
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j];
                 }
             }
         }
-        //new Arrays.stream(matrix).ge/
         return max;
     }
 }
