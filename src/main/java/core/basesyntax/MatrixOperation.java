@@ -8,11 +8,7 @@ public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
         int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (i == j) {
-                    diagonal[i] = matrix[i][j];
-                }
-            }
+            diagonal[i] = matrix[i][i];
         }
         return diagonal;
     }
@@ -20,36 +16,32 @@ public class MatrixOperation {
     public int[] getCounterDiagonal(int[][] matrix) {
         int[] anotherDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (i + j == matrix.length - 1) {
-                    anotherDiagonal[i] = matrix[i][j];
-                }
-            }
+            anotherDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
         return anotherDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        int min = matrix[0][0];
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                if (anInt < min) {
-                    min = anInt;
+        int minValue = matrix[0][0];
+        for (int[] row : matrix) {
+            for (int element : row) {
+                if (element < minValue) {
+                    minValue = element;
                 }
             }
         }
-        return min;
+        return minValue;
     }
 
     public int getMax(int[][] matrix) {
-        int max = matrix[0][0];
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                if (anInt > max) {
-                    max = anInt;
+        int maxValue = matrix[0][0];
+        for (int[] row : matrix) {
+            for (int element : row) {
+                if (element > maxValue) {
+                    maxValue = element;
                 }
             }
         }
-        return max;
+        return maxValue;
     }
 }
