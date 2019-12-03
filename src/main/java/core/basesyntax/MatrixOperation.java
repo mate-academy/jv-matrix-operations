@@ -13,8 +13,7 @@ public class MatrixOperation {
         return diagonal;
     }
 
-    public int[] getCounterDiagonal(int[][] matrix) {
-        int n = matrix.length;
+    public int[] getCounterDiagonal(int[][] matrix) {        
         int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             diagonal[i] = matrix[i][n - i - 1];
