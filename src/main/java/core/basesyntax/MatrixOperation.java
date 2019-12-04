@@ -6,28 +6,25 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int l = matrix[0].length;
-        int[] result = new int[l];
-        for (int i = 0; i < l; i++) {
+        int[] result = new int[matrix[0].length];
+        for (int i = 0; i < matrix[0].length; i++) {
             result[i] = matrix[i][i];
         }
         return result;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int l = matrix[0].length;
-        int[] result = new int[l];
-        for (int i = 0; i < l; i++) {
-            result[i] = matrix[i][l - 1 - i];
+        int[] result = new int[matrix[0].length];
+        for (int i = 0; i < matrix[0].length; i++) {
+            result[i] = matrix[i][matrix[0].length - 1 - i];
         }
         return result;
     }
 
     public int getMin(int[][] matrix) {
         int min = matrix[0][0];
-        int l = matrix[0].length;
-        for (int i = 0; i < l; i++) {
-            for (int j = 0; j < l; j++) {
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
                 if (min > matrix[i][j]) {
                     min = matrix[i][j];
                 }
@@ -38,9 +35,8 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int max = matrix[0][0];
-        int l = matrix[0].length;
-        for (int i = 0; i < l; i++) {
-            for (int j = 0; j < l; j++) {
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
                 if (max < matrix[i][j]) {
                     max = matrix[i][j];
                 }
