@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 /**
  * Реалізуйте методи для знаходження головної та побічної діагоналі квадратної матриці,
  * максимального та мінімального елементів.
  */
 public class MatrixOperation {
 
-    public static int[] getDiagonal(int[][] matrix) {
+    public int[] getDiagonal(int[][] matrix) {
         int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             diagonal[i] = (matrix[i][i]);
@@ -16,30 +14,32 @@ public class MatrixOperation {
         return diagonal;
     }
 
-    public static int[] getCounterDiagonal(int[][] matrix) {
+    public int[] getCounterDiagonal(int[][] matrix) {
+        int tmp = 0;
         int[] diagonal = new int[matrix.length];
         for (int i = matrix.length - 1; i > -1; i--) {
-            diagonal[(matrix.length - 1) - i] = (matrix[matrix.length - 1 - i][i]);
+            tmp = (matrix.length - 1) - i;
+            diagonal[tmp] = (matrix[tmp][i]);
         }
         return diagonal;
     }
 
     public int getMin(int[][] matrix) {
-        int min = Arrays.stream(matrix[0]).min().getAsInt();
-        int tmp;
+        int min = matrix[0][0];
         for (int i = 1; i < matrix.length; i++) {
-            tmp = Arrays.stream(matrix[i]).min().getAsInt();
-            min = Math.min(min, tmp);
+            for (int j = 0; j < matrix.length; j++) {
+                min = matrix[i][j] < min ? matrix[i][j] : min;
+            }
         }
         return min;
     }
 
     public int getMax(int[][] matrix) {
-        int max = Arrays.stream(matrix[0]).max().getAsInt();
-        int tmp;
-        for (int i = 1; i < matrix.length; i++) {
-            tmp = Arrays.stream(matrix[i]).max().getAsInt();
-            max = Math.max(max, tmp);
+        int max = matrix[0][0];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                max = matrix[i][j] > max ? matrix[i][j] : max;
+            }
         }
         return max;
     }
