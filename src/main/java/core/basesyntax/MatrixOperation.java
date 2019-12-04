@@ -9,12 +9,8 @@ public class MatrixOperation {
         int[] arr = new int[matrix.length];
         int idxArr = 0;
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                if (i == j) {
-                    arr[idxArr] = matrix[i][j];
-                    idxArr++;
-                }
-            }
+            arr[idxArr] = matrix[i][i];
+            idxArr++;
         }
         return arr;
     }
