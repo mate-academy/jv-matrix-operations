@@ -8,49 +8,51 @@ public class MatrixOperation {
 
     public int[] getDiagonal(int[][] matrix) {
 
-        int[] mainDiag = new int[matrix.length];
+        int[] mainDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (i == j) {
-                    mainDiag[i] = matrix[i][j];
-                }
-            }
+            mainDiagonal[i] = matrix[i][i];
         }
-        return mainDiag;
+        return mainDiagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
 
-        int[] secDiag = new int[matrix.length];
+        int[] secondaryDiag = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            secDiag[i] = matrix[i][matrix.length - 1 - i];
+            secondaryDiag[i] = matrix[i][matrix.length - 1 - i];
         }
-        return secDiag;
+        return secondaryDiag;
     }
 
     public int getMin(int[][] matrix) {
 
-        int minVal = 2147483647;
+        int minimalValue = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (minVal > matrix[i][j]) {
-                    minVal = matrix[i][j];
+                if (i == 0 && j == 0) {
+                    minimalValue = matrix[0][0];
+                }
+                if (minimalValue > matrix[i][j]) {
+                    minimalValue = matrix[i][j];
                 }
             }
         }
-        return minVal;
+        return minimalValue;
     }
 
     public int getMax(int[][] matrix) {
 
-        int maxVal = -2147483648;
+        int maximalValue = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (maxVal < matrix[i][j]) {
-                    maxVal = matrix[i][j];
+                if (i == 0 && j == 0) {
+                    maximalValue = matrix[0][0];
+                }
+                if (maximalValue < matrix[i][j]) {
+                    maximalValue = matrix[i][j];
                 }
             }
         }
-        return maxVal;
+        return maximalValue;
     }
 }
