@@ -14,11 +14,9 @@ public class MatrixOperation {
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int j = matrix.length - 1;
         int[] counterDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            counterDiagonal[i] = matrix[i][j];
-            j--;
+            counterDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
         return counterDiagonal;
     }
@@ -27,7 +25,7 @@ public class MatrixOperation {
         int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                if (matrix[i][j] <= min) {
+                if (matrix[i][j] < min) {
                     min = matrix[i][j];
                 }
             }
@@ -39,7 +37,7 @@ public class MatrixOperation {
         int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                if (matrix[i][j] >= max) {
+                if (matrix[i][j] > max) {
                     max = matrix[i][j];
                 }
             }
