@@ -16,11 +16,11 @@ public class MatrixOperation {
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int[] counter = new int[matrix.length];
+        int[] counterDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            counter[i] = matrix[i][matrix.length - i - 1];
+            counterDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
-        return counter;
+        return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
