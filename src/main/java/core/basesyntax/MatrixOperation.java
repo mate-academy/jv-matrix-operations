@@ -24,7 +24,7 @@ public class MatrixOperation {
     }
 
     public int getMin(int[][] matrix) {
-        int min = 0;
+        int min = matrix[0][0];
         if (matrix.length == 1) {
             return matrix[0][0];
         }
@@ -39,7 +39,7 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-        int max = 0;
+        int max = matrix[0][0];
         if (matrix.length == 1) {
             return matrix[0][0];
         }
