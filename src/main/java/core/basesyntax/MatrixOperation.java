@@ -3,48 +3,44 @@ package core.basesyntax;
 public class MatrixOperation {
 
     public int[] getDiagonal(int[][] matrix) {
-        int [] result = new int[matrix.length];
+        int[] result = new int[matrix.length];
         for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (i == j) {
-                    result[i] = matrix[i][j];
-                }
-            }
+            result[i] = matrix[i][i];
         }
         return result;
     }
 
-    public int [] getCounterDiagonal(int[][] matrix) {
-        int [] result = new int [matrix.length];
+    public int []getCounterDiagonal(int[][] matrix) {
+        int[] result = new int [matrix.length];
         int num = matrix.length - 1;
         for (int i = 0; i < matrix.length; i++) {
-            result [i] = matrix [i] [num];
+            result[i] = matrix[i][num];
             num--;
         }
         return result;
     }
 
-    public int getMin(int [][] matrix) {
-        int pivot = matrix [0][0];
+    public int getMin(int[][] matrix) {
+        int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix [i].length; j++) {
-                if (matrix [i][j] < pivot) {
-                    pivot = matrix [i][j];
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
                 }
             }
         }
-        return pivot;
+        return min;
     }
 
     public int getMax(int[][] matrix) {
-        int pivot = matrix[0][0];
+        int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix [i].length; j++) {
-                if (matrix [i][j] > pivot) {
-                    pivot = matrix [i] [j];
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j];
                 }
             }
         }
-        return pivot;
+        return max;
     }
 }
