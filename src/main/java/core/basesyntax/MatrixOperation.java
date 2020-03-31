@@ -11,7 +11,6 @@ public class MatrixOperation {
         for (int i = 0; i < diagonalLength; i++) {
             diagonal[i] = matrix[i][i];
         }
-
         return diagonal;
     }
 
@@ -21,43 +20,32 @@ public class MatrixOperation {
         for (int i = 0, j = diagonalLength - 1; i < diagonalLength; i++, j--) {
             counterDiagonal[i] = matrix[i][j];
         }
-
         return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
         int matrixShape = matrix.length;
         int matrixSize = matrix.length * matrix.length;
-        int min = Integer.MAX_VALUE;
-        int rowIndex;
-        int colIndex;
+        int min = matrix[0][0];
 
-        for (int i = 0; i < matrixSize; i++) {
-            rowIndex = i / matrixShape;
-            colIndex = i % matrixShape;
-            if (matrix[rowIndex][colIndex] < min) {
-                min = matrix[rowIndex][colIndex];
+        for (int i = 1; i < matrixSize; i++) {
+            if (matrix[i / matrixShape][i % matrixShape] < min) {
+                min = matrix[i / matrixShape][i % matrixShape];
             }
         }
-
         return min;
     }
 
     public int getMax(int[][] matrix) {
         int matrixShape = matrix.length;
         int matrixSize = matrix.length * matrix.length;
-        int max = Integer.MIN_VALUE;
-        int rowIndex;
-        int colIndex;
+        int max = matrix[0][0];
 
-        for (int i = 0; i < matrixSize; i++) {
-            rowIndex = i / matrixShape;
-            colIndex = i % matrixShape;
-            if (matrix[rowIndex][colIndex] > max) {
-                max = matrix[rowIndex][colIndex];
+        for (int i = 1; i < matrixSize; i++) {
+            if (matrix[i / matrixShape][i % matrixShape] > max) {
+                max = matrix[i / matrixShape][i % matrixShape];
             }
         }
-
         return max;
     }
 }
