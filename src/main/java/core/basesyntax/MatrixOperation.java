@@ -26,15 +26,15 @@ public class MatrixOperation {
     }
 
     public int getMin(int[][] matrix) {
-        int biggestNum = matrix[0][0];
+        int lowestNum = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (biggestNum > matrix[i][j]) {
-                    biggestNum = matrix[i][j];
+                if (lowestNum > matrix[i][j]) {
+                    lowestNum = matrix[i][j];
                 }
             }
         }
-        return biggestNum;
+        return lowestNum;
     }
 
     public int getMax(int[][] matrix) {
