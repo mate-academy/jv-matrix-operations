@@ -9,7 +9,6 @@ public class MatrixOperation {
         int[] checkDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             checkDiagonal[i] = matrix[i][i];
-            //System.out.println("Diagonal elements: " + checkDiagonal[i]);
         }
         return checkDiagonal;
     }
@@ -17,7 +16,6 @@ public class MatrixOperation {
     public int[] getCounterDiagonal(int[][] matrix) {
         int[] checkCounterDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            System.out.println("matrix.length - i - 1: " + (matrix.length - i - 1));
             checkCounterDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
         return checkCounterDiagonal;
