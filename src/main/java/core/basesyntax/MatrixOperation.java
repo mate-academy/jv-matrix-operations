@@ -23,9 +23,9 @@ public class MatrixOperation {
 
     public int getMin(int[][] matrix) {
         int min = 2147483647;
-        for (int[] row : matrix){
+        for (int[] row : matrix) {
             for (int number : row) {
-                if (number < min){
+                if (number < min) {
                     min = number;
                 }
             }
@@ -35,9 +35,9 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int max = -2147483647;
-        for (int[] row : matrix){
+        for (int[] row : matrix) {
             for (int number : row) {
-                if (number > max){
+                if (number > max) {
                     max = number;
                 }
             }
