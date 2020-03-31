@@ -6,18 +6,38 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        return null;
+        int[] diagonal = new int[matrix.length];
+        for (int i = 0, j = 0; i < matrix.length; i++, j++) {
+            diagonal[j] = matrix[i][j];
+        }
+        return diagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        return null;
+        int[] counterDiagonal = new int[matrix.length];
+        for (int i = matrix.length - 1, j = 0; i >= 0; i--, j++) {
+            counterDiagonal[matrix.length - j - 1] = matrix[i][j];
+        }
+        return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        return 0;
+        int min = Integer.MAX_VALUE;
+        for (int[] arr : matrix) {
+            for (int element : arr) {
+                min = Integer.min(min, element);
+            }
+        }
+        return min;
     }
 
     public int getMax(int[][] matrix) {
-        return 0;
+        int max = Integer.MIN_VALUE;
+        for (int[] arr : matrix) {
+            for (int element : arr) {
+                max = Integer.max(max, element);
+            }
+        }
+        return max;
     }
 }
