@@ -22,21 +22,12 @@ public class MatrixOperation {
     }
 
     public int getMin(int[][] matrix) {
-        /* или можно так но второй вариант быстрее на одну операцию
-        int minn=matrix[0][0];
+        int minn = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                minn=Math.min(minn,matrix[i][j]);
-            }
-        }
-        */
-        int minn = matrix[0][0];
-        for (int i = 1; i < matrix[0].length; i++) {
-            minn = Math.min(minn, matrix[0][i]);
-        }
-        for (int i = 1; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                minn = Math.min(minn, matrix[i][j]);
+                if (minn > matrix[i][j]) {
+                    minn = matrix[i][j];
+                }
             }
         }
         return minn;
@@ -44,12 +35,11 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int maxx = matrix[0][0];
-        for (int i = 1; i < matrix[0].length; i++) {
-            maxx = Math.max(maxx, matrix[0][i]);
-        }
-        for (int i = 1; i < matrix.length; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                maxx = Math.max(maxx, matrix[i][j]);
+                if (maxx < matrix[i][j]) {
+                    maxx = matrix[i][j];
+                }
             }
         }
         return maxx;
