@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 /**
  * Реалізуйте методи для знаходження головної та побічної діагоналі квадратної матриці,
  * максимального та мінімального елементів.
@@ -26,8 +24,11 @@ public class MatrixOperation {
     public int getMin(int[][] matrix) {
         int result = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            Arrays.sort(matrix[i]);
-            result = result > matrix[i][0] ? matrix[i][0] : result;
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (result > matrix[i][j]) {
+                    result = matrix[i][j];
+                }
+            }
         }
         return result;
     }
@@ -35,8 +36,11 @@ public class MatrixOperation {
     public int getMax(int[][] matrix) {
         int result = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            Arrays.sort(matrix[i]);
-            result = result < matrix[i][matrix.length - 1] ? matrix[i][matrix.length - 1] : result;
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (result < matrix[i][j]) {
+                    result = matrix[i][j];
+                }
+            }
         }
         return result;
     }
