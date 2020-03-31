@@ -15,12 +15,9 @@ public class MatrixOperation {
 
     public int[] getCounterDiagonal(int[][] matrix) {
         int[] result = new int[matrix.length];
-        int x = 0;
-        int y = matrix.length - 1;
         for (int i = 0; i < result.length; i++) {
-            result[i] = matrix[x][y];
-            x++;
-            y--;
+            result[i] = matrix[i][matrix.length - 1 - i];
+
         }
         return result;
     }
