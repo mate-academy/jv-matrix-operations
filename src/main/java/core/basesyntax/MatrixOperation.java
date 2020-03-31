@@ -8,11 +8,11 @@ public class MatrixOperation {
 
     public int[] getDiagonal(int[][] matrix) {
 
-        int[] counter = new int[matrix.length];
+        int[] diagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            counter[i] = matrix[i][i];
+            diagonal[i] = matrix[i][i];
         }
-        return counter;
+        return diagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
