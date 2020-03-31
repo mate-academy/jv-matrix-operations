@@ -23,10 +23,10 @@ public class MatrixOperation {
 
     public int getMin(int[][] matrix) {
         int min = matrix[0][0];
-        for (int[] ints : matrix) {
+        for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                if (ints[j] < min) {
-                    min = ints[j];
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
                 }
             }
         }
@@ -35,10 +35,10 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int max = matrix[0][0];
-        for (int[] ints : matrix) {
+        for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                if (ints[j] > max) {
-                    max = ints[j];
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j];
                 }
             }
         }
