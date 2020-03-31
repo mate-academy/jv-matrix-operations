@@ -10,7 +10,6 @@ public class MatrixOperation {
         for (int i = 0; i < matrix[0].length; i++) {
             diagonal[i] = matrix[i][i];
         }
-
         return diagonal;
     }
 
@@ -19,7 +18,6 @@ public class MatrixOperation {
         for (int i = 0; i < matrix.length; i++) {
             counterDiagonal[i] = matrix[i][matrix[0].length - i - 1];
         }
-
         return counterDiagonal;
     }
 
@@ -32,7 +30,6 @@ public class MatrixOperation {
                 }
             }
         }
-
         return min;
     }
 
@@ -45,7 +42,6 @@ public class MatrixOperation {
                 }
             }
         }
-
         return max;
     }
 }
