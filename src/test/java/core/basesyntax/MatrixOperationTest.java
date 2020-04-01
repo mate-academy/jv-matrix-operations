@@ -12,7 +12,7 @@ public class MatrixOperationTest {
             {9, -7, 12, 19},
             {55, 34, 1, -10}
     };
-git commit
+
     private static final int[][] SINGLE_ELEMENT_MATRIX = {
             {-5}
     };
