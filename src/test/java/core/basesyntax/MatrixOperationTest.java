@@ -57,7 +57,7 @@ public class MatrixOperationTest {
     }
 
     @Test
-    public void     getMatrixMin() {
+    public void getMatrixMin() {
         MatrixOperation matrixOperation = new MatrixOperation();
         int actualResult = matrixOperation.getMin(TEST_MATRIX);
         int expectedResult = Arrays.stream(TEST_MATRIX)
