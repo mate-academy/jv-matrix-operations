@@ -5,7 +5,7 @@ package core.basesyntax;
  * максимального та мінімального елементів.
  */
 public class MatrixOperation {
-    public int[] getDiagonal(int[][] matrix) {
+    public int [] getDiagonal(int[][] matrix) {
         int [] principaldiagonal = new int [matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             principaldiagonal[i] = matrix[i][i];
