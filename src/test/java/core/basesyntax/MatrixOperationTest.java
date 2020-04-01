@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-        import org.junit.Assert;
-        import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-        import java.util.Arrays;
+import java.util.Arrays;
 
 public class MatrixOperationTest {
     private static final int[][] TEST_MATRIX = {
@@ -12,7 +12,7 @@ public class MatrixOperationTest {
             {9, -7, 12, 19},
             {55, 34, 1, -10}
     };
-
+git commit
     private static final int[][] SINGLE_ELEMENT_MATRIX = {
             {-5}
     };
