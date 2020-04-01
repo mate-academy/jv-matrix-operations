@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import org.junit.Assert;
-import org.junit.Test;
+        import org.junit.Assert;
+        import org.junit.Test;
 
-import java.util.Arrays;
+        import java.util.Arrays;
 
 public class MatrixOperationTest {
     private static final int[][] TEST_MATRIX = {
