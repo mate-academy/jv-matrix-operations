@@ -6,10 +6,9 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int s = matrix.length;
-        int[] diagonal = new int[s];
-        for (int i = 0; i < s; i++) {
-            for (int j = 0; j < s; j++) {
+        int[] diagonal = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 if (i == j) {
                     diagonal[i] = matrix[i][j];
                 }
@@ -19,19 +18,17 @@ public class MatrixOperation {
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int s = matrix.length;
-        int[] counterDiagonal = new int[s];
-        for (int i = 0; i < s; i++) {
-            counterDiagonal[i] = matrix[i][s - 1 - i];
+        int[] counterDiagonal = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            counterDiagonal[i] = matrix[i][matrix.length - 1 - i];
         }
         return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        int s = matrix.length;
         int min = matrix[0][0];
-        for (int i = 0; i < s; i++) {
-            for (int j = 0; j < s; j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 if (matrix[i][j] < min) {
                     min = matrix[i][j];
                 }
@@ -41,10 +38,9 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-        int s = matrix.length;
         int max = matrix[0][0];
-        for (int i = 0; i < s; i++) {
-            for (int j = 0; j < s; j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 if (max < matrix[i][j]) {
                     max = matrix[i][j];
                 }
