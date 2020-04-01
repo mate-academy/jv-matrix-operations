@@ -34,7 +34,7 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-        int max = matrix[matrix.length - 1][matrix.length - 1];
+        int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 if (matrix[i][j] > max) {
