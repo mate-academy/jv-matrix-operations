@@ -8,15 +8,15 @@ public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
         int[] principalDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            principalDiagonal[i] = (matrix[i][i]);
+            principalDiagonal[i] = matrix[i][i];
         }
         return principalDiagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
         int[] counterDiagonal = new int[matrix.length];
-        for (int len = matrix.length - 1, i = len; i >= 0; i--) {
-            counterDiagonal[len - i] = matrix[len - i][i];
+        for (int i = 0; i < matrix.length; i++) {
+            counterDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
         return counterDiagonal;
     }
