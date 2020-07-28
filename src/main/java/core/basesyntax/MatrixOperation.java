@@ -16,9 +16,7 @@ public class MatrixOperation {
     public int[] getCounterDiagonal(int[][] matrix) {
         int[] counterDiagonal = new int[matrix.length];
         for (int i = 0, j = matrix.length - 1; i < matrix.length; i++, j--) {
-            if (i + j == matrix.length - 1) {
-                counterDiagonal[j] = matrix[j][i];
-            }
+            counterDiagonal[j] = matrix[j][i];
         }
         return counterDiagonal;
     }
