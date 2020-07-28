@@ -28,10 +28,10 @@ public class MatrixOperation {
     public int getMin(int[][] matrix) {
         int minElement = matrix[0][0];
 
-        for (int row = 0; row < matrix.length; row++) {
-            for (int column = 0; column < matrix.length; column++) {
-                if (matrix[row][column] < minElement) {
-                    minElement = matrix[row][column];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[i][j] < minElement) {
+                    minElement = matrix[i][j];
                 }
             }
         }
@@ -42,10 +42,10 @@ public class MatrixOperation {
     public int getMax(int[][] matrix) {
         int maxElement = matrix[0][0];
 
-        for (int row = 0; row < matrix.length; row++) {
-            for (int column = 0; column < matrix.length; column++) {
-                if (matrix[row][column] > maxElement) {
-                    maxElement = matrix[row][column];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[i][j] > maxElement) {
+                    maxElement = matrix[i][j];
                 }
             }
         }
