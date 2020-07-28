@@ -30,7 +30,6 @@ public class MatrixOperation {
                 }
             }
         }
-
         return min;
     }
 
@@ -43,7 +42,6 @@ public class MatrixOperation {
                 }
             }
         }
-
         return max;
     }
 }
