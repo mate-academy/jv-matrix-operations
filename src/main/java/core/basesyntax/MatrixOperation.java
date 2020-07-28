@@ -6,15 +6,11 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int[] result = new int[matrix.length];
+        int[] matrixDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (i == j) {
-                    result[i] = matrix[i][j];
-                }
-            }
+            matrixDiagonal[i] = matrix[i][i];
         }
-        return result;
+        return matrixDiagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
@@ -22,34 +18,34 @@ public class MatrixOperation {
             return new int[]{matrix[0][0]};
         }
 
-        int[] result = new int[matrix.length];
+        int[] matrixCounterDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            result[i] = matrix[i][matrix.length - 1 - i];
+            matrixCounterDiagonal[i] = matrix[i][matrix.length - 1 - i];
         }
-        return result;
+        return matrixCounterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        int result = matrix[0][0];
+        int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] < result) {
-                    result = matrix[i][j];
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
                 }
             }
         }
-        return result;
+        return min;
     }
 
     public int getMax(int[][] matrix) {
-        int result = matrix[0][0];
+        int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] > result) {
-                    result = matrix[i][j];
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j];
                 }
             }
         }
-        return result;
+        return max;
     }
 }
