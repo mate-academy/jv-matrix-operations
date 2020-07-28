@@ -23,8 +23,6 @@ public class MatrixOperation {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (min > matrix[i][j]) {
                     min = matrix[i][j];
-                } else {
-                    min = min;
                 }
             }
         }
@@ -37,8 +35,6 @@ public class MatrixOperation {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (max < matrix[i][j]) {
                     max = matrix[i][j];
-                } else {
-                    max = max;
                 }
             }
         }
