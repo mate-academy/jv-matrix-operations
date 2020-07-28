@@ -36,8 +36,8 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int matrixMax = matrix[0][0];
-        for (int[] massive : matrix) {
-            for (int number : massive) {
+        for (int[] array : matrix) {
+            for (int number : array) {
                 if (number > matrixMax) {
                     matrixMax = number;
                 }
