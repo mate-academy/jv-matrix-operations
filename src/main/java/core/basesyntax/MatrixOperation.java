@@ -9,7 +9,7 @@ public class MatrixOperation {
         int[] result = new int[matrix.length];
 
         for (int first = 0, second = 0; first < matrix.length; first++, second++) {
-            result[first] += matrix[first][second];
+            result[first] = matrix[first][second];
         }
 
         return result;
