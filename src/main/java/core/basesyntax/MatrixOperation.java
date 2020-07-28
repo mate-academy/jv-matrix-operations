@@ -26,7 +26,7 @@ public class MatrixOperation {
         int lowest = matrix[0][0];
         for (int[] ints : matrix) {
             for (int j = 0; j < matrix[0].length; j++) {
-                lowest = Math.min(lowest, ints[j]);
+                lowest = lowest <= ints[j] ? lowest : ints[j];
             }
         }
         return lowest;
@@ -36,7 +36,7 @@ public class MatrixOperation {
         int largest = matrix[0][0];
         for (int[] ints : matrix) {
             for (int j = 0; j < matrix[0].length; j++) {
-                largest = Math.max(largest, ints[j]);
+                largest = largest >= ints[j] ? largest : ints[j];
             }
         }
         return largest;
