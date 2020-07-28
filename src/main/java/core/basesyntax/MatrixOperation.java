@@ -1,23 +1,50 @@
 package core.basesyntax;
 
+import java.util.Arrays;
+
 /**
  * Реалізуйте методи для знаходження головної та побічної діагоналі квадратної матриці,
  * максимального та мінімального елементів.
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        return null;
+        int[] result = new int[matrix[0].length];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = matrix[i][i];
+        }
+        return result;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        return null;
+        String s = Arrays.deepToString(matrix);
+        int[] result = new int[matrix[0].length];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = matrix[i][matrix[0].length - i - 1];
+        }
+        return result;
     }
 
     public int getMin(int[][] matrix) {
-        return 0;
+        int minValue = matrix[0][0];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[i][j] < minValue) {
+                    minValue = matrix[i][j];
+                }
+            }
+        }
+        return minValue;
     }
 
     public int getMax(int[][] matrix) {
-        return 0;
+        int maxValue = matrix[0][0];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[i][j] > maxValue) {
+                    maxValue = matrix[i][j];
+                }
+            }
+        }
+        return maxValue;
     }
 }
