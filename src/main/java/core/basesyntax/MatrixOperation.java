@@ -7,8 +7,8 @@ package core.basesyntax;
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
         int[] diagonal = new int[matrix.length];
-        for (int row = 0; row != matrix.length; row++) {
-            diagonal[row] = matrix[row][row];
+        for (int i = 0; i != matrix.length; i++) {
+            diagonal[i] = matrix[i][i];
         }
         return diagonal;
     }
@@ -23,10 +23,10 @@ public class MatrixOperation {
 
     public int getMin(int[][] matrix) {
         int min = matrix[0][0];
-        for (int[] column : matrix) {
-            for (int row : column) {
-                if (row < min) {
-                    min = row;
+        for (int[] row : matrix) {
+            for (int value : row) {
+                if (value < min) {
+                    min = value;
                 }
             }
         }
@@ -35,10 +35,10 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int max = matrix[0][0];
-        for (int[] column : matrix) {
-            for (int row : column) {
-                if (row > max) {
-                    max = row;
+        for (int[] row : matrix) {
+            for (int value : row) {
+                if (value > max) {
+                    max = value;
                 }
             }
         }
