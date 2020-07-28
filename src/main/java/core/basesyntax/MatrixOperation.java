@@ -7,23 +7,22 @@ package core.basesyntax;
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
         int[] mainDiagonal = new int[matrix.length];
-        for (int indexOfMatrix = 0; indexOfMatrix < matrix.length; indexOfMatrix++) {
-            mainDiagonal[indexOfMatrix] = matrix[indexOfMatrix][indexOfMatrix];
+        for (int i = 0; i < matrix.length; i++) {
+            mainDiagonal[i] = matrix[i][i];
         }
         return mainDiagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
         int[] counterDiagonal = new int[matrix.length];
-        for (int indexOfMatrix = 0; indexOfMatrix < matrix.length; indexOfMatrix++) {
-            counterDiagonal[indexOfMatrix] =
-                    matrix[indexOfMatrix][matrix.length - indexOfMatrix - 1];
+        for (int i = 0; i < matrix.length; i++) {
+            counterDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
         return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        int minValue = Integer.MAX_VALUE;
+        int minValue = matrix[0][0];
         for (int rowIndex = 0; rowIndex < matrix.length; rowIndex++) {
             for (int columnIndex = 0; columnIndex < matrix.length; columnIndex++) {
                 if (minValue > matrix[rowIndex][columnIndex]) {
@@ -35,7 +34,7 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-        int maxValue = Integer.MIN_VALUE;
+        int maxValue = matrix[0][0];
         for (int rowIndex = 0; rowIndex < matrix.length; rowIndex++) {
             for (int columnIndex = 0; columnIndex < matrix.length; columnIndex++) {
                 if (maxValue < matrix[rowIndex][columnIndex]) {
