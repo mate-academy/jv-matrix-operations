@@ -4,20 +4,45 @@ package core.basesyntax;
  * Реалізуйте методи для знаходження головної та побічної діагоналі квадратної матриці,
  * максимального та мінімального елементів.
  */
+
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        return null;
+        int[] mainDiagonal = new int[matrix.length];
+        for (int i = 0; i < mainDiagonal.length; i++) {
+            mainDiagonal[i] = matrix[i][i];
+        }
+        return mainDiagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        return null;
+        int[] sideDiagonal = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            sideDiagonal[i] = matrix[i][matrix.length - 1 - i];
+        }
+        return sideDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        return 0;
+        int minValue = 0;
+        for (int[] ints : matrix) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (minValue > ints[j]) {
+                    minValue = ints[j];
+                }
+            }
+        }
+        return minValue;
     }
 
     public int getMax(int[][] matrix) {
-        return 0;
+        int maxValue = matrix[0][0];
+        for (int[] ints : matrix) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (maxValue < ints[j]) {
+                    maxValue = ints[j];
+                }
+            }
+        }
+        return maxValue;
     }
 }
