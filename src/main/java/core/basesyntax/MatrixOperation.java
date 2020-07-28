@@ -14,19 +14,19 @@ public class MatrixOperation {
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int[] cdiagonal = new int[matrix.length];
+        int[] counterDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            cdiagonal[i] = matrix[i][matrix.length - i - 1];
+            counterDiagonal[i] = matrix[i][matrix.length - i - 1];
         }
-        return cdiagonal;
+        return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
         int min = matrix[0][0];
-        for (int[] line:matrix) {
-            for (int el :line) {
-                if (el < min) {
-                    min = el;
+        for (int[] line : matrix) {
+            for (int element : line) {
+                if (element < min) {
+                    min = element;
                 }
             }
         }
@@ -35,10 +35,10 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int max = matrix[0][0];
-        for (int[] line:matrix) {
-            for (int el :line) {
-                if (el > max) {
-                    max = el;
+        for (int[] line : matrix) {
+            for (int element : line) {
+                if (element > max) {
+                    max = element;
                 }
             }
         }
