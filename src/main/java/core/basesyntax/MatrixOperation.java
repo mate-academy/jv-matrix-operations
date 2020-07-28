@@ -22,7 +22,7 @@ public class MatrixOperation {
     }
 
     public int getMin(int[][] matrix) {
-        int min = Integer.MAX_VALUE;
+        int min = matrix[0][0];
         for (int[] innerArray : matrix) {
             for (int data : innerArray) {
                 min = Math.min(min, data);
@@ -32,7 +32,7 @@ public class MatrixOperation {
     }
 
     public int getMax(int[][] matrix) {
-        int max = Integer.MIN_VALUE;
+        int max = matrix[0][0];
         for (int[] innerArray : matrix) {
             for (int data : innerArray) {
                 max = Math.max(max, data);
