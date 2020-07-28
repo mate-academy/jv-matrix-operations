@@ -1,27 +1,25 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 /**
  * Реалізуйте методи для знаходження головної та побічної діагоналі квадратної матриці,
  * максимального та мінімального елементів.
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int[] main_diagonal_array = new int [Math.min(matrix.length, matrix[0].length)];
-        for (int i = 0; i < main_diagonal_array.length; i++) {
-            main_diagonal_array[i] = matrix[i][i];
+        int[] mainDiagonalArray = new int[Math.min(matrix.length, matrix[0].length)];
+        for (int i = 0; i < mainDiagonalArray.length; i++) {
+            mainDiagonalArray[i] = matrix[i][i];
         }
-        return main_diagonal_array;
+        return mainDiagonalArray;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int[] counter_diagonal_array = new int [Math.min(matrix.length, matrix[0].length)];
-        for (int i = 0; i < counter_diagonal_array.length; i++) {
-            counter_diagonal_array[i] = matrix[i][counter_diagonal_array.length-i-1];
+        int[] counterDiagonalArray = new int[Math.min(matrix.length, matrix[0].length)];
+        for (int i = 0; i < counterDiagonalArray.length; i++) {
+            counterDiagonalArray[i] = matrix[i][counterDiagonalArray.length - i - 1];
         }
 
-        return counter_diagonal_array;
+        return counterDiagonalArray;
     }
 
     public int getMin(int[][] matrix) {
