@@ -22,7 +22,7 @@ public class MatrixOperation {
     }
 
     public int getMin(int[][] matrix) {
-        int minValue = Integer.MAX_VALUE;
+        int minValue = matrix[0][0];
         for (int[] matrixRow : matrix) {
             for (int matrixElement : matrixRow) {
                 if (matrixElement < minValue) {
