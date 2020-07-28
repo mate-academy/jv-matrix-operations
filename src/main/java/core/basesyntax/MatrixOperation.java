@@ -8,9 +8,7 @@ public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
         int[] diagonal = new int[matrix.length];
         for (int i = 0, j = 0; i < matrix.length; i++, j++) {
-            if (i == j) {
-                diagonal[i] = matrix[i][j];
-            }
+            diagonal[i] = matrix[i][j];
         }
         return diagonal;
     }
