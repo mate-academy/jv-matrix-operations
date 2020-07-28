@@ -6,18 +6,42 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        return null;
+        int[] mainDiagonal = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            mainDiagonal[i] = matrix[i][i];
+        }
+        return mainDiagonal;
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        return null;
+        int[] counterDiagonal = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            counterDiagonal[i] = matrix[i][matrix.length - i - 1];
+        }
+        return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
-        return 0;
+        int minValue = matrix[0][0];
+        for (int rowIndex = 0; rowIndex < matrix.length; rowIndex++) {
+            for (int columnIndex = 0; columnIndex < matrix.length; columnIndex++) {
+                if (minValue > matrix[rowIndex][columnIndex]) {
+                    minValue = matrix[rowIndex][columnIndex];
+                }
+            }
+        }
+        return minValue;
     }
 
     public int getMax(int[][] matrix) {
-        return 0;
+        int maxValue = matrix[0][0];
+        for (int rowIndex = 0; rowIndex < matrix.length; rowIndex++) {
+            for (int columnIndex = 0; columnIndex < matrix.length; columnIndex++) {
+                if (maxValue < matrix[rowIndex][columnIndex]) {
+                    maxValue = matrix[rowIndex][columnIndex];
+                }
+            }
+        }
+        return maxValue;
     }
 }
