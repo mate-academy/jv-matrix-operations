@@ -7,7 +7,7 @@ package core.basesyntax;
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
         int count = 0;
-        int [] mainDiagonal = new int [matrix.length];
+        int[] mainDiagonal = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (i == j) {
@@ -19,8 +19,8 @@ public class MatrixOperation {
         return mainDiagonal;
     }
 
-    public int [] getCounterDiagonal(int [][] matrix) {
-        int [] secondDiagonal = new int [matrix.length];
+    public int[] getCounterDiagonal(int[][] matrix) {
+        int[] secondDiagonal = new int[matrix.length];
         int n = matrix.length;
         for (int i = 0; i < n; i++) {
             secondDiagonal[i] = matrix[i][n - i - 1];
