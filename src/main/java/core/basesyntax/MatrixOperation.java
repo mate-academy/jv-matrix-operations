@@ -15,18 +15,16 @@ public class MatrixOperation {
 
     public int[] getCounterDiagonal(int[][] matrix) {
         int[] counterDiagonal = new int[matrix.length];
-        int depthIndex = matrix.length - 1;
-        for (int i = 0; i < matrix.length; i++) {
+        for (int i = 0, depthIndex = matrix.length - 1; i < matrix.length; i++, depthIndex--) {
             counterDiagonal[i] = matrix[i][depthIndex];
-            depthIndex--;
         }
         return counterDiagonal;
     }
 
     public int getMin(int[][] matrix) {
         int minimal = matrix[0][0];
-        for (int[] innerMatrix: matrix) {
-            for (int element:innerMatrix) {
+        for (int[] innerMatrix : matrix) {
+            for (int element : innerMatrix) {
                 if (element < minimal) {
                     minimal = element;
                 }
@@ -37,8 +35,8 @@ public class MatrixOperation {
 
     public int getMax(int[][] matrix) {
         int maximal = matrix[0][0];
-        for (int[] innerMatrix: matrix) {
-            for (int element:innerMatrix) {
+        for (int[] innerMatrix : matrix) {
+            for (int element : innerMatrix) {
                 if (element > maximal) {
                     maximal = element;
                 }
