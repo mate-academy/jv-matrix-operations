@@ -25,7 +25,7 @@ public class MatrixOperation {
         int min = matrix[0][0];
         for (int[] innerArray : matrix) {
             for (int data : innerArray) {
-                min = Math.min(min, data);
+                min = data < min ? data : min;
             }
         }
         return min;
@@ -35,7 +35,7 @@ public class MatrixOperation {
         int max = matrix[0][0];
         for (int[] innerArray : matrix) {
             for (int data : innerArray) {
-                max = Math.max(max, data);
+                max = data > max ? data : max;
             }
         }
         return max;
