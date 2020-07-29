@@ -6,7 +6,7 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int [] getDiagonal = new int [matrix.length];
+        int[] getDiagonal = new int [matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             getDiagonal[i] = matrix[i][i];
         }
@@ -14,7 +14,7 @@ public class MatrixOperation {
     }
 
     public int[] getCounterDiagonal(int[][] matrix) {
-        int [] getCounterDiagonal = new int [matrix.length];
+        int[] getCounterDiagonal = new int [matrix.length];
         for (int i = 0, j = matrix.length - 1; i < matrix.length && j >= 0; i++, j--) {
             getCounterDiagonal[i] = matrix[i][j];
         }
