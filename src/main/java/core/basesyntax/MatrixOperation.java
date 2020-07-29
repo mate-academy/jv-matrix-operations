@@ -6,12 +6,10 @@ package core.basesyntax;
  */
 public class MatrixOperation {
     public int[] getDiagonal(int[][] matrix) {
-        int [] diagonal = new int [matrix.length];
+        int[] diagonal = new int [matrix.length];
+        
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                if (i == j) {
                     diagonal[i] = matrix[i][j];
-                }
             }
         }
         return diagonal;
@@ -20,7 +18,6 @@ public class MatrixOperation {
     public int[] getCounterDiagonal(int[][] matrix) {
         int [] counterDiagonal = new int [matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
                 counterDiagonal[i] = matrix[i][matrix.length - 1 - i];
             }
         }
@@ -28,26 +25,22 @@ public class MatrixOperation {
     }
 
     public int getMin(int[][] matrix) {
-        int minM = matrix[0][0];
+        int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                if (matrix[i][j] < minM) {
-                    minM = matrix[i][j];
-                }
+                if (matrix[i][i] < min) {
+                    min = matrix[i][i];
             }
         }
-        return minM;
+        return min;
     }
 
     public int getMax(int[][] matrix) {
-        int maxM = matrix[0][0];
+        int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                if (matrix[i][j] > maxM) {
-                    maxM = matrix[i][j];
-                }
+                if (matrix[i][i] < min) {
+                    max = matrix[i][i];
             }
         }
-        return maxM;
+        return max;
     }
 }
